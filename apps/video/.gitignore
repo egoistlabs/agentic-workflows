@@ -1,0 +1,9 @@
+node_modules/
+dist/
+.videos/
+out/
+.env
+
+# Third-party reference footage stays local
+references/
+*:Zone.Identifier

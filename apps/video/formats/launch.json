@@ -1,0 +1,10 @@
+{
+  "description": "30–90 s product launch piece, kinetic type over real product UI, music-led",
+  "stages": ["00-brief", "01-references", "02-story", "04-storyboard", "05-build", "06-qa", "07-render"],
+  "checkpoints": { "02-story": "script.md", "04-storyboard": "storyboard.md", "07-render": "final.md" },
+  "width": 1920, "height": 1080, "fps": 30,
+  "maxGap": 3.0,
+  "captions": "none",
+  "rules": ["core", "motion"],
+  "sfxPalette": "loud"
+}

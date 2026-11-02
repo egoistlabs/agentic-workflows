@@ -1,0 +1,5 @@
+# Research outputs stay local
+.studies/
+
+node_modules/
+dist/

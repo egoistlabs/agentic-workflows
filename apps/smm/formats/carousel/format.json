@@ -1,0 +1,28 @@
+{
+  "name": "Carousel",
+  "description": "Multi-photo post: a cover, 4–8 body slides with one point each and a CTA slide. Facebook shows it as a photo grid, not a swipe, so the cover must work alone and the first slides must make sense side by side",
+  "bestFor": ["steps", "list", "framework", "comparison", "numbers breakdown", "anything worth saving"],
+  "brief": "brief.md",
+  "structures": ["listicle", "step-by-step", "myth-vs-truth", "before-after", "framework-breakdown", "checklist", "story-in-slides"],
+  "requiredFields": ["structure", "cover", "body slides", "cta slide", "visual notes"],
+  "limits": {
+    "slideWords": 30,
+    "bodySlidesMin": 4,
+    "bodySlidesMax": 8,
+    "maxSlides": 10,
+    "coverStatesPromise": true
+  },
+  "hookAt": "cover",
+  "sizeUnit": "slides",
+  "producer": {
+    "tool": "agentic-image",
+    "format": "carousel",
+    "fallback": "manual",
+    "note": "agentic-image --from and asset.json arrive in its build step 5: until then start agentic-image new <slug> --format carousel and give it brief.md, or the human makes the slides by hand (e.g. Canva)"
+  },
+  "files": { "kind": "image", "min": 6, "max": 10, "ext": [".png", ".jpg"], "aspect": ["4:5", "1:1"], "numbered": true },
+  "postType": "multi-photo",
+  "metrics": ["reach", "shares", "comments", "link clicks"],
+  "batch": { "name": "design batch", "min": 2, "max": 4, "checklist": "slide headlines in order, per carousel" },
+  "unconfirmed": ["limits.maxSlides"]
+}

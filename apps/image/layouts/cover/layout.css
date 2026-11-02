@@ -1,0 +1,81 @@
+/* cover: the hook, large, low on the slide; an optional full-bleed photo under a scrim. */
+.layout-cover .cover-photo {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  width: 100%;
+  height: 100%;
+}
+
+.layout-cover .cover-scrim {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    linear-gradient(to top, var(--bg) 36%, transparent 78%),
+    linear-gradient(to bottom, var(--bg), transparent 32%);
+}
+
+.layout-cover .cover-glow {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: radial-gradient(
+    circle at 92% 6%,
+    var(--accentGlow),
+    transparent 58%
+  );
+}
+
+.layout-cover .cover-top {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space4);
+}
+
+.layout-cover .cover-mark {
+  display: block;
+  width: var(--space6);
+  height: var(--space2);
+  border-radius: var(--radiusSm);
+  background: var(--accent);
+}
+
+.layout-cover .cover-kicker {
+  max-width: 85%;
+  color: var(--accent);
+  font-size: var(--typeSmall);
+  font-weight: var(--weightStrong);
+  line-height: var(--leadingBody);
+}
+
+.layout-cover .cover-main {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space5);
+}
+
+.layout-cover .cover-title {
+  font-size: var(--typeDisplay);
+}
+
+.layout-cover .cover-body {
+  max-width: 90%;
+  color: var(--muted);
+  font-size: var(--typeBody);
+}
+
+.layout-cover .cover-footer {
+  margin-top: var(--space6);
+  padding-top: var(--space4);
+  border-top: calc(var(--space1) / 4) solid var(--line);
+  color: var(--muted);
+  font-size: var(--typeSmall);
+  font-weight: var(--weightStrong);
+  line-height: 1;
+}
+
+.layout-cover.has-image .cover-body {
+  color: var(--fg);
+}

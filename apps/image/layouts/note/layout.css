@@ -1,0 +1,56 @@
+/* note: one point. The title leads; a quote becomes a speech bubble; the body is quieter. */
+.layout-note .note-top {
+  display: flex;
+  align-items: center;
+  gap: var(--space3);
+}
+
+.layout-note .note-label {
+  color: var(--accent);
+  font-size: var(--typeSmall);
+  font-weight: var(--weightStrong);
+  line-height: 1;
+}
+
+.layout-note .counter {
+  margin-left: auto;
+}
+
+.layout-note .note-main {
+  margin: auto 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space5);
+}
+
+.layout-note .note-title {
+  font-size: var(--typeTitle);
+}
+
+/* Dialogue: a speech bubble, its tail at the bottom left. */
+.layout-note .note-quote {
+  align-self: flex-start;
+  max-width: 100%;
+  padding: var(--space4) var(--space5) var(--space5);
+  border-radius: var(--radiusLg) var(--radiusLg) var(--radiusLg) var(--radiusSm);
+  background: var(--surface);
+  font-size: var(--typeHeading);
+  font-weight: var(--weightStrong);
+  line-height: var(--leadingTight);
+  letter-spacing: var(--trackingTight);
+}
+
+.layout-note .note-quote::before {
+  content: "";
+  display: block;
+  width: var(--space5);
+  height: var(--space1);
+  margin-bottom: var(--space4);
+  border-radius: var(--radiusSm);
+  background: var(--accent);
+}
+
+.layout-note .note-body {
+  color: var(--muted);
+  font-size: var(--typeBody);
+}

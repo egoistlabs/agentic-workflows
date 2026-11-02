@@ -1,0 +1,8 @@
+{
+  "about": "Stages in order. A checkpoint is a file in that stage's folder that needs an \"approved: yes\" line, written only after the human approves, before the job moves past the stage.",
+  "stages": ["00-brief", "01-copy", "02-layout", "03-render", "04-deliver"],
+  "checkpoints": {
+    "01-copy": { "file": "copy.md", "approves": "Copy" },
+    "03-render": { "file": "visuals.md", "approves": "Visuals" }
+  }
+}

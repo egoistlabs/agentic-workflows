@@ -1,0 +1,10 @@
+{
+  "use": "One point with a short body. Optional dialogue styling: `quote` is a spoken line, set as a speech bubble under the title (e.g. title \"My manager said:\").",
+  "fields": {
+    "label": { "type": "text", "maxWords": 4, "about": "A short label above the title, in the accent colour" },
+    "title": { "type": "text", "required": true, "maxWords": 14, "about": "The point" },
+    "quote": { "type": "text", "maxWords": 24, "about": "Dialogue: a spoken line, styled as a speech bubble" },
+    "body": { "type": "text", "maxWords": 26, "about": "The short explanation" }
+  },
+  "image": "none"
+}

@@ -1,0 +1,54 @@
+/* Preview chrome only (never in an export): the page around the slides. */
+body.preview {
+  margin: 0;
+  background: #121212;
+  color: #e8e8e8;
+  font: 14px/1.4 system-ui, sans-serif;
+}
+
+.preview-bar {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  display: flex;
+  gap: 16px;
+  align-items: baseline;
+  padding: 12px 24px;
+  background: rgb(18 18 18 / 0.94);
+  border-bottom: 1px solid #2a2a2a;
+}
+
+.preview-bar span {
+  color: #9a9a9a;
+}
+
+.preview-bar nav {
+  margin-left: auto;
+  display: flex;
+  gap: 12px;
+}
+
+.preview a {
+  color: #9ad;
+}
+
+.preview .deck {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  padding: 32px 24px;
+  justify-content: center;
+}
+
+.frame {
+  margin: 0;
+}
+
+.frame figcaption {
+  margin-bottom: 8px;
+  color: #9a9a9a;
+}
+
+.frame-slide {
+  box-shadow: 0 12px 40px rgb(0 0 0 / 0.5);
+}

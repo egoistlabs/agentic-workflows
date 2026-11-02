@@ -1,0 +1,16 @@
+{{#image}}
+<img class="cover-photo" src="{{url}}" alt="{{alt}}" style="{{style}}">
+<div class="cover-scrim" aria-hidden="true"></div>
+{{/image}}
+{{^image}}<div class="cover-glow" aria-hidden="true"></div>{{/image}}
+<div class="safe">
+  <div class="cover-top">
+    <span class="cover-mark" aria-hidden="true"></span>
+    {{#kicker}}<p class="cover-kicker">{{kicker}}</p>{{/kicker}}
+  </div>
+  <div class="cover-main">
+    <h1 class="title cover-title">{{title}}</h1>
+    {{#body}}<p class="prose cover-body">{{body}}</p>{{/body}}
+  </div>
+  {{#footer}}<p class="cover-footer">{{footer}}</p>{{/footer}}
+</div>

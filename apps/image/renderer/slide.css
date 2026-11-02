@@ -1,0 +1,66 @@
+/* Base for every slide. Like the layouts, it reads only the brand's token
+   properties (set on .slide by /tokens.css): no colour, font, size or radius here. */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body.export {
+  margin: 0;
+}
+
+.slide {
+  position: relative;
+  width: var(--slideW);
+  height: var(--slideH);
+  overflow: hidden;
+  isolation: isolate;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font);
+  font-size: var(--typeBody);
+  font-weight: var(--weightBody);
+  line-height: var(--leadingBody);
+  font-kerning: normal;
+  font-synthesis: none;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: geometricPrecision;
+}
+
+.slide :is(h1, h2, h3, p, ul, ol, li, blockquote, figure) {
+  margin: 0;
+  padding: 0;
+}
+
+.slide :is(ul, ol) {
+  list-style: none;
+}
+
+/* The safe area: no text outside it. */
+.slide .safe {
+  position: absolute;
+  inset: var(--safeY) var(--safeX);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Slide position, e.g. 2/6, in the top corner of body slides. */
+.slide .counter {
+  font-size: var(--typeMin);
+  font-weight: var(--weightStrong);
+  font-variant-numeric: tabular-nums;
+  color: var(--muted);
+  line-height: 1;
+}
+
+.slide .title {
+  font-weight: var(--weightStrong);
+  line-height: var(--leadingTight);
+  letter-spacing: var(--trackingTight);
+  text-wrap: balance;
+}
+
+.slide .prose {
+  text-wrap: pretty;
+}

@@ -1,0 +1,85 @@
+/* native: a light slide in a native-OS style. Reading order: 1 the title, 2 the card's state pill
+   (the only accent), 3 everything else quiet. The bottom-left square stays free for the brand mark. */
+.layout-native .n-kicker {
+  color: var(--muted);
+  font-size: var(--typeSmall);
+  font-weight: var(--weightStrong);
+}
+
+.layout-native .n-main {
+  margin-top: var(--space5);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space3);
+}
+
+.layout-native .n-title {
+  font-size: var(--typeTitle);
+}
+
+.layout-native .n-title-1 {
+  font-size: var(--typeDisplay);
+}
+
+.layout-native .n-body {
+  color: var(--muted);
+  font-size: var(--typeBody);
+}
+
+.layout-native .n-card {
+  margin: auto 0;
+  padding: var(--space4);
+  border-radius: var(--radiusLg);
+  background: var(--card);
+  box-shadow: 0 var(--space2) var(--space5) var(--shadow);
+  display: flex;
+  align-items: center;
+  gap: var(--space4);
+}
+
+.layout-native .n-card-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space1);
+}
+
+.layout-native .n-app,
+.layout-native .n-meta {
+  color: var(--muted);
+  font-size: var(--typeMin);
+}
+
+.layout-native .n-app {
+  font-weight: var(--weightStrong);
+}
+
+.layout-native .n-card-title {
+  font-size: var(--typeSmall);
+  font-weight: var(--weightStrong);
+  line-height: var(--leadingBody);
+}
+
+.layout-native .n-pill {
+  padding: var(--space2) var(--space4);
+  border-radius: var(--radiusLg);
+  background: var(--accent);
+  color: var(--accentFg);
+  font-size: var(--typeHeading);
+  font-weight: var(--weightStrong);
+  line-height: var(--leadingTight);
+  white-space: nowrap;
+}
+
+.layout-native .n-foot {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+/* The brand mark (token markFile), bottom left; the space stays empty without one. */
+.layout-native .n-mark {
+  width: calc(var(--space5) * 5);
+  height: var(--space5);
+  background: var(--markUrl) left bottom / contain no-repeat;
+}

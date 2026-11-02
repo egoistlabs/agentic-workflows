@@ -1,0 +1,13 @@
+{
+  "description": "Vertical talking-head video from raw footage: footage first, reframes on the cuts, word-by-word captions, light native-UI overlays",
+  "stages": ["00-brief", "01-references", "02-story", "03-source", "04-storyboard", "05-build", "06-qa", "07-render"],
+  "checkpoints": { "02-story": "structure.md", "03-source": "cuts.md", "04-storyboard": "storyboard.md", "07-render": "final.md" },
+  "width": 1080, "height": 1920, "fps": 30,
+  "maxGap": 3.0,
+  "captions": "word",
+  "rules": ["core", "talking-head"],
+  "captionsBottom": 0.21,
+  "speed": 1.0,
+  "sfxPalette": "soft",
+  "hold": 1.0
+}

@@ -1,0 +1,24 @@
+{
+  "stages": [
+    "00-brief",
+    "01-story-bank",
+    "02-audience",
+    "03-trends",
+    "04-ideas",
+    "05-series",
+    "06-pieces",
+    "07-calendar",
+    "08-produce",
+    "09-schedule",
+    "10-review"
+  ],
+  "checkpoints": {
+    "01-story-bank": "stories.md",
+    "03-trends": "topics.md",
+    "04-ideas": "shortlist.md",
+    "05-series": "series.md",
+    "06-pieces": "pieces.md",
+    "07-calendar": "calendar.md",
+    "09-schedule": "approval.md"
+  }
+}

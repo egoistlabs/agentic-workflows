@@ -1,0 +1,19 @@
+{
+  "name": "agentic-workflows",
+  "private": true,
+  "description": "Staged, agent-driven workflows for AI coding agents: images, video, social content planning and pain research",
+  "license": "MIT",
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "workspaces": [
+    "apps/*"
+  ],
+  "scripts": {
+    "setup": "node scripts/setup.mjs",
+    "build": "npm run build --workspaces --if-present",
+    "lint": "npm run lint --workspaces --if-present",
+    "test": "npm run test --workspaces --if-present"
+  }
+}

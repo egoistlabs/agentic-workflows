@@ -1,0 +1,30 @@
+{
+  "name": "Talking reel",
+  "description": "Vertical talking-head reel: you talk through 3–6 beats to camera; agentic-video cuts, captions and renders it",
+  "bestFor": ["story", "emotion", "confession", "reaction"],
+  "brief": "brief.md",
+  "structures": ["then-turn-now-do-next", "myth-truth-proof", "mistake-fix", "before-after", "answer-a-comment", "react-to-news"],
+  "requiredFields": ["structure", "target length", "on-screen hook text", "must-say", "beats"],
+  "limits": {
+    "beatsMin": 3,
+    "beatsMax": 6,
+    "beatWords": 25,
+    "mustSayMax": 2,
+    "lengthTolerance": 0.2,
+    "maxSeconds": 90,
+    "audio": true
+  },
+  "hookAt": "first 3 s",
+  "sizeUnit": "seconds",
+  "producer": {
+    "tool": "agentic-video",
+    "format": "talking-head",
+    "command": "agentic-video new <slug> --from <brief>",
+    "note": "--from arrives in agentic-video with build step 3; until then start agentic-video new <slug> --format talking-head and give it brief.md"
+  },
+  "files": { "kind": "video", "min": 1, "max": 1, "ext": [".mp4"], "aspect": ["9:16"] },
+  "postType": "reel",
+  "metrics": ["plays", "avg watch time", "shares", "follows"],
+  "batch": { "name": "shoot day", "min": 3, "max": 5, "checklist": "beat names large enough to read off a phone, in shoot order" },
+  "unconfirmed": ["limits.maxSeconds"]
+}

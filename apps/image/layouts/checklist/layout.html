@@ -1,0 +1,12 @@
+<div class="safe">
+  <div class="check-top">
+    <p class="counter">{{slide.n}}/{{slide.count}}</p>
+  </div>
+  <div class="check-main">
+    <h2 class="title check-title">{{title}}</h2>
+    <ul class="check-items">
+      {{#items}}<li class="check-item"><span class="check-box" aria-hidden="true"></span><p class="prose check-text">{{.}}</p></li>{{/items}}
+    </ul>
+    {{#tail}}<p class="prose check-tail">{{tail}}</p>{{/tail}}
+  </div>
+</div>

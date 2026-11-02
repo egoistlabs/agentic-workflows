@@ -1,0 +1,112 @@
+[
+  {
+    "id": "hn",
+    "name": "Hacker News (Algolia API)",
+    "kind": "forum",
+    "audiences": ["engineer", "founder"],
+    "voice": "firsthand for engineers; secondhand about non-tech users",
+    "needs": [],
+    "fetcher": "hn",
+    "target": "optional topic prefixed to each phrase, e.g. a product or tool name"
+  },
+  {
+    "id": "reddit",
+    "name": "Reddit (OAuth API)",
+    "kind": "forum",
+    "audiences": ["non-tech", "founder", "engineer", "agency"],
+    "voice": "firsthand",
+    "needs": ["REDDIT_CLIENT_ID", "REDDIT_CLIENT_SECRET"],
+    "fetcher": "reddit",
+    "target": "subreddit, e.g. r/<subreddit>. Credentials: a \"script\" app at reddit.com/prefs/apps; the public JSON returns 403"
+  },
+  {
+    "id": "pullpush",
+    "name": "Reddit archive (PullPush)",
+    "kind": "forum",
+    "audiences": ["non-tech", "founder", "engineer", "agency"],
+    "voice": "firsthand",
+    "needs": [],
+    "fetcher": "pullpush",
+    "target": "subreddit, e.g. r/<subreddit>. The archive is patchy and can return nothing for a subreddit"
+  },
+  {
+    "id": "producthunt",
+    "name": "Product Hunt comments (GraphQL API)",
+    "kind": "reviews",
+    "audiences": ["non-tech", "founder"],
+    "voice": "firsthand",
+    "needs": ["PRODUCTHUNT_TOKEN"],
+    "fetcher": "producthunt",
+    "target": "post slug, e.g. <product-slug>. Token: a developer token at producthunt.com/v2/oauth/applications"
+  },
+  {
+    "id": "trustpilot",
+    "name": "Trustpilot reviews",
+    "kind": "reviews",
+    "audiences": ["non-tech", "founder"],
+    "voice": "firsthand",
+    "needs": [],
+    "fetcher": "trustpilot",
+    "target": "company domain, e.g. example.com. Bot protection often returns 403; then save reviews in 01-collect/manual/trustpilot/"
+  },
+  {
+    "id": "g2",
+    "name": "G2 reviews (manual export)",
+    "kind": "reviews",
+    "audiences": ["non-tech", "founder", "engineer"],
+    "voice": "firsthand",
+    "needs": [],
+    "fetcher": "manual",
+    "target": "product name; save reviews as .md files in 01-collect/manual/g2/ (the site blocks scripted access)"
+  },
+  {
+    "id": "discord",
+    "name": "Discord community (manual export)",
+    "kind": "community",
+    "audiences": ["non-tech", "founder"],
+    "voice": "firsthand",
+    "needs": [],
+    "fetcher": "manual",
+    "target": "server/channel; save messages as .md files in 01-collect/manual/discord/"
+  },
+  {
+    "id": "skool",
+    "name": "Skool community (manual export)",
+    "kind": "community",
+    "audiences": ["non-tech", "founder"],
+    "voice": "firsthand",
+    "needs": [],
+    "fetcher": "manual",
+    "target": "community; save posts as .md files in 01-collect/manual/skool/"
+  },
+  {
+    "id": "x",
+    "name": "X recent search (API, or manual export)",
+    "kind": "social",
+    "audiences": ["non-tech", "founder", "engineer"],
+    "voice": "firsthand",
+    "needs": ["X_BEARER_TOKEN"],
+    "fetcher": "x",
+    "target": "optional query prefix, e.g. a product or tool name. Without a token, save posts in 01-collect/manual/x/. API search covers only the last 7 days"
+  },
+  {
+    "id": "youtube",
+    "name": "YouTube comments (Data API)",
+    "kind": "social",
+    "audiences": ["non-tech", "founder"],
+    "voice": "firsthand",
+    "needs": ["YOUTUBE_API_KEY"],
+    "fetcher": "youtube",
+    "target": "video search query, e.g. <tool> tutorial"
+  },
+  {
+    "id": "websearch",
+    "name": "Web search fallback (agent-driven)",
+    "kind": "forum",
+    "audiences": ["non-tech", "founder", "engineer", "agency"],
+    "voice": "mixed; judge per item",
+    "needs": [],
+    "fetcher": "manual",
+    "target": "the agent saves verbatim items as .md files in 01-collect/manual/websearch/. Low reach"
+  }
+]

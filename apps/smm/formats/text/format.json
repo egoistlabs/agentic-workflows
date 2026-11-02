@@ -1,0 +1,22 @@
+{
+  "name": "Text",
+  "description": "A text post: a full draft the human edits; the approved text is the post",
+  "bestFor": ["hot take", "question", "quick lesson"],
+  "brief": "brief.md",
+  "structures": ["hot-take", "question", "mini-lesson", "story-short"],
+  "requiredFields": ["structure", "draft"],
+  "limits": {
+    "words": 120,
+    "firstLineAlone": true
+  },
+  "hookAt": "first line",
+  "sizeUnit": "words",
+  "producer": {
+    "tool": "manual",
+    "note": "The human edits the draft; nothing to make"
+  },
+  "files": { "kind": "none", "min": 0, "max": 0, "ext": [], "aspect": [] },
+  "postType": "text",
+  "metrics": ["reach", "comments", "shares"],
+  "batch": { "name": "writing batch", "checklist": "final drafts in posting order" }
+}

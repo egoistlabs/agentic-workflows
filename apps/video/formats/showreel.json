@@ -1,0 +1,10 @@
+{
+  "description": "~15 s beat-synced showreel ending on a logo",
+  "stages": ["00-brief", "01-references", "04-storyboard", "05-build", "06-qa", "07-render"],
+  "checkpoints": { "04-storyboard": "storyboard.md", "07-render": "final.md" },
+  "width": 1920, "height": 1080, "fps": 30,
+  "maxGap": 2.0,
+  "captions": "none",
+  "rules": ["core", "motion"],
+  "sfxPalette": "loud"
+}

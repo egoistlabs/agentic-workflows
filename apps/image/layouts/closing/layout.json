@@ -1,0 +1,11 @@
+{
+  "use": "Last slide: the takeaway and the one CTA.",
+  "fields": {
+    "label": { "type": "text", "maxWords": 4, "about": "A short label above the takeaway, in the accent colour" },
+    "title": { "type": "text", "required": true, "maxWords": 16, "about": "The takeaway" },
+    "body": { "type": "text", "maxWords": 20, "about": "One supporting line" },
+    "cta": { "type": "text", "required": true, "maxWords": 12, "about": "The one action, in the brand's exact CTA wording" },
+    "footer": { "type": "text", "maxWords": 6, "about": "The page name or handle, only as the human gives it" }
+  },
+  "image": "none"
+}

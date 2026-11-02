@@ -1,0 +1,10 @@
+{
+  "use": "First slide of a carousel: the hook, and an optional photo. It must work alone (Facebook shows carousels as a grid).",
+  "fields": {
+    "kicker": { "type": "text", "maxWords": 8, "about": "A short line above the hook: who it's for or what it is" },
+    "title": { "type": "text", "required": true, "maxWords": 12, "about": "The hook, set large" },
+    "body": { "type": "text", "maxWords": 18, "about": "One supporting line under the hook" },
+    "footer": { "type": "text", "maxWords": 6, "about": "The page name, handle or series, at the bottom" }
+  },
+  "image": "optional"
+}

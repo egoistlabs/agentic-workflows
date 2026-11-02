@@ -1,0 +1,61 @@
+/* checklist: a title, then 3–6 rows, each with an accent tick, divided by hairlines. */
+.layout-checklist .check-top {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.layout-checklist .check-main {
+  margin: auto 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.layout-checklist .check-title {
+  margin-bottom: var(--space3);
+  font-size: var(--typeHeading);
+}
+
+.layout-checklist .check-item {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space4);
+  padding: var(--space3) 0;
+  border-bottom: calc(var(--space1) / 4) solid var(--line);
+}
+
+.layout-checklist .check-item:last-child {
+  border-bottom: 0;
+}
+
+/* A filled accent disc with a tick drawn in the text-on-accent colour. */
+.layout-checklist .check-box {
+  position: relative;
+  flex: none;
+  width: 1.1em;
+  height: 1.1em;
+  margin-top: 0.1em;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+.layout-checklist .check-box::after {
+  content: "";
+  position: absolute;
+  left: 0.36em;
+  top: 0.2em;
+  width: 0.28em;
+  height: 0.52em;
+  border: solid var(--accentFg);
+  border-width: 0 0.1em 0.1em 0;
+  transform: rotate(45deg);
+}
+
+.layout-checklist .check-text {
+  font-size: var(--typeBody);
+}
+
+.layout-checklist .check-tail {
+  margin-top: var(--space4);
+  color: var(--muted);
+  font-size: var(--typeSmall);
+}

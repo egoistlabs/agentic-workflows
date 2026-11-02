@@ -1,0 +1,39 @@
+{
+  "name": "agentic-video",
+  "version": "0.1.0",
+  "description": "Staged, agent-driven video editing on Remotion",
+  "license": "MIT",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "bin": {
+    "agentic-video": "dist/cli/main.js"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "prepare": "npm run build",
+    "format": "prettier --write src",
+    "lint": "prettier --check src && tsc -p tsconfig.json --noEmit",
+    "dev": "tsx src/cli/main.ts"
+  },
+  "dependencies": {
+    "@huggingface/transformers": "4.3.1",
+    "@remotion/bundler": "4.0.507",
+    "@remotion/cli": "^4.0.507",
+    "@remotion/google-fonts": "^4.0.507",
+    "@remotion/renderer": "4.0.507",
+    "@remotion/transitions": "4.0.507",
+    "react": "19.2.3",
+    "react-dom": "19.2.3",
+    "remotion": "4.0.507"
+  },
+  "devDependencies": {
+    "@types/node": "22.20.5",
+    "prettier": "3.9.10",
+    "tsx": "4.23.15",
+    "typescript": "5.9.3"
+  }
+}

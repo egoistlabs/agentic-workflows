@@ -1,0 +1,38 @@
+# Workspace metadata
+.agents/
+.codex/
+.aws/
+
+# Credentials and local configuration
+.env
+.env.*
+!.env.example
+.envrc
+.npmrc
+.pypirc
+*.pem
+*.key
+*.p12
+*.pfx
+credentials.json
+secrets.json
+service-account*.json
+
+# Dependencies and generated output
+node_modules/
+dist/
+build/
+coverage/
+.next/
+.venv/
+__pycache__/
+
+# Local files
+.DS_Store
+*.log
+
+# Agent job folders (drafts, raw footage, personal data)
+.images/
+.videos/
+.plans/
+.studies/

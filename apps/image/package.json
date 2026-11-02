@@ -1,0 +1,32 @@
+{
+  "name": "agentic-image",
+  "version": "0.1.0",
+  "description": "Staged, agent-driven carousels and single images from a brand's design tokens",
+  "license": "MIT",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "bin": {
+    "agentic-image": "dist/cli/main.js"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "prepare": "npm run build",
+    "format": "prettier --write src tests",
+    "lint": "prettier --check src tests && tsc -p tsconfig.json --noEmit",
+    "test": "node --import tsx --test tests/*.test.ts",
+    "dev": "tsx src/cli/main.ts"
+  },
+  "devDependencies": {
+    "@types/node": "22.20.5",
+    "prettier": "3.9.10",
+    "tsx": "4.23.15",
+    "typescript": "5.9.3"
+  },
+  "dependencies": {
+    "playwright-core": "1.55.0"
+  }
+}

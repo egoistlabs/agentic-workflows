@@ -1,0 +1,15 @@
+{
+  "description": "Vertical split-screen explainer from raw footage: a motion-graphics canvas above, the speaker in a footage card below, full-face punch-ins for the lines that matter",
+  "stages": ["00-brief", "01-references", "02-story", "03-source", "04-storyboard", "05-build", "06-qa", "07-render"],
+  "checkpoints": { "02-story": "script.md", "03-source": "cuts.md", "04-storyboard": "storyboard.md", "07-render": "final.md" },
+  "width": 1080, "height": 1920, "fps": 30,
+  "maxGap": 2.0,
+  "captions": "word",
+  "rules": ["core", "explainer"],
+  "captionsBottom": 0.21,
+  "split": { "card": [72, 1407, 936, 513], "radius": 44, "seam": 0.335, "popOut": 0.2, "pattern": [1.15, 1.25, 1.18] },
+  "faceShare": [0.15, 0.4],
+  "speed": 1.0,
+  "sfxPalette": "soft",
+  "hold": 1.0
+}

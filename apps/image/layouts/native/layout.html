@@ -1,0 +1,21 @@
+<div class="safe">
+  {{#kicker}}<p class="n-kicker">{{kicker}}</p>{{/kicker}}
+  <div class="n-main">
+    <h2 class="title n-title n-title-{{slide.n}}">{{title}}</h2>
+    {{#body}}<p class="prose n-body">{{body}}</p>{{/body}}
+  </div>
+  {{#cardTitle}}
+  <div class="n-card">
+    <div class="n-card-text">
+      {{#app}}<span class="n-app">{{app}}</span>{{/app}}
+      <p class="n-card-title">{{cardTitle}}</p>
+      {{#cardMeta}}<span class="n-meta">{{cardMeta}}</span>{{/cardMeta}}
+    </div>
+    {{#pill}}<span class="n-pill">{{pill}}</span>{{/pill}}
+  </div>
+  {{/cardTitle}}
+  <div class="n-foot">
+    <div class="n-mark" aria-hidden="true"></div>
+    <p class="counter">{{slide.n}}/{{slide.count}}</p>
+  </div>
+</div>

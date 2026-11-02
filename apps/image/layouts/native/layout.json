@@ -1,0 +1,13 @@
+{
+  "use": "Light, native-OS-style slide: a big statement, then one native UI card (a ticket, PR, chat message, notification, calendar invite) that acts out the point. The card's status pill is the slide's only accent, so the eye goes title → pill → the rest. On slide 1 the title is set at display size. The bottom-left corner stays free for the brand mark. Never label the card \"example\".",
+  "fields": {
+    "kicker": { "type": "text", "maxWords": 6, "about": "A small grey label above the title (e.g. Sign 2)" },
+    "title": { "type": "text", "required": true, "maxWords": 14, "about": "The point, set large" },
+    "body": { "type": "text", "maxWords": 20, "about": "One quiet supporting line" },
+    "app": { "type": "text", "maxWords": 4, "about": "The card's app or source (e.g. GitHub, Slack · #standup)" },
+    "cardTitle": { "type": "text", "maxWords": 12, "about": "The card's main line; a newline starts a second line" },
+    "cardMeta": { "type": "text", "maxWords": 10, "about": "The card's small grey line" },
+    "pill": { "type": "text", "maxWords": 3, "about": "The card's state, in the accent: the slide's focal point" }
+  },
+  "image": "none"
+}

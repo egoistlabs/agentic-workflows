@@ -1,0 +1,25 @@
+{
+  "name": "Image with caption",
+  "description": "One image that lands one striking point; the caption carries the lesson",
+  "bestFor": ["stat", "quote", "before/after", "screenshot", "meme", "one-screen framework"],
+  "brief": "brief.md",
+  "structures": ["stat-card", "quote-card", "before-after", "screenshot-proof", "one-screen-framework", "meme"],
+  "requiredFields": ["structure", "headline", "visual", "caption"],
+  "limits": {
+    "imageWords": 12,
+    "supportingLinesMax": 1,
+    "captionWords": 150
+  },
+  "hookAt": "headline",
+  "sizeUnit": "words on image",
+  "producer": {
+    "tool": "agentic-image",
+    "format": "image",
+    "fallback": "manual",
+    "note": "agentic-image --from and asset.json arrive in its build step 5: until then start agentic-image new <slug> --format image and give it brief.md, or the human makes the image by hand (e.g. Canva)"
+  },
+  "files": { "kind": "image", "min": 1, "max": 1, "ext": [".png", ".jpg"], "aspect": ["4:5", "1:1"] },
+  "postType": "photo",
+  "metrics": ["reach", "shares", "reactions", "comments"],
+  "batch": { "name": "design batch", "min": 4, "max": 6, "checklist": "headline and visual per image, in order" }
+}

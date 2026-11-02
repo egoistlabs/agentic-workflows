@@ -1,0 +1,9 @@
+{
+  "use": "A checklist of 3–6 items under a title, with an optional closing line.",
+  "fields": {
+    "title": { "type": "text", "required": true, "maxWords": 10, "about": "What the list is" },
+    "items": { "type": "list", "required": true, "min": 3, "max": 6, "maxWords": 10, "about": "The items, one line each where possible" },
+    "tail": { "type": "text", "maxWords": 14, "about": "One line after the list" }
+  },
+  "image": "none"
+}
